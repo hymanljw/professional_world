@@ -59,3 +59,8 @@ gem 'simple_form'
 gem 'carrierwave', '~> 1.0'
 gem 'devise_token_auth'
 gem 'sidekiq'
+
+# Very simple Roles library without any authorization enforcement supporting scope on resource object.
+gem "rolify"
+
+gem 'pretender'
