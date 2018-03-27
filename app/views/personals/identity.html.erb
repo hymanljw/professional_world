@@ -1,0 +1,7 @@
+<ul>
+  <% @users.each do |user| %>
+      <%= link_to impersonate_personal_path(user),method: :post do %>
+          <li><%= user.nick %></li>
+      <% end %>
+  <% end %>
+</ul>

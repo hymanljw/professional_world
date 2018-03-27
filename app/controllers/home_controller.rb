@@ -3,7 +3,8 @@ class HomeController < ApplicationController
 
   def index
     @img_path = @current_user.head_img_url
-    @articles = @current_user.articles.page(1).per(10)
+    @articles = @current_user.articles.page(params[:page]).per(10)
+    @authority = true || @current_user.has_role?(:admin)
   end
 
 end

@@ -10,6 +10,11 @@
     <%= link_to destroy_user_session_path,method: :delete do %>
         <div class="sign_out float_right">退出</div>
     <% end %>
+    <% if @authority %>
+        <%= link_to identity_personals_path,method: :get do %>
+            <div class="sign_out float_right">管理员模式</div>
+        <% end %>
+    <% end %>
     <div class="pc_user_logo float_right">
       <%= link_to edit_personal_path(@current_user) do %>
           <%= image_tag @img_path,class:"mine-title-pic" %>
