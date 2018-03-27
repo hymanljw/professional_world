@@ -24,3 +24,7 @@
 
 # Ignore db/schema.rb
 /db/schema.rb
+# Ignore application configuration
+/config/application.yml
+
+public/uploads/*
