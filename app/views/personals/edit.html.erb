@@ -1,0 +1,17 @@
+<div class="container container-white">
+  <div class="web-padding">
+    <%= simple_form_for @current_user, url: personal_path(@current_user),html: { multipart: true },method: :put do |f| %>
+    <div class="new_add_pic_btn">
+      <img width="105" height="105" src="<%= @current_user.head_img_url %>" id="user_head_img" >
+      <label id="user_headimg_btn" class="big_box">
+        <div class="txt_change_img">
+          <div class="change-user-pic-bac change_user_pic_bac_top changeImg">更换头像</div>
+          <input type="file" name="user[head_img]" class="formfile" id="img_uploader" data-performer="#world_head_img">
+        </div>
+      </label>
+    </div>
+    <%= f.input_field :nick,class:"change-user-name" %>
+    <button class="btn btn-success btn-margin" id="upload_user_img_btn">提交</button>
+    <% end %>
+  </div>
+</div>

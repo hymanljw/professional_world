@@ -9,7 +9,13 @@ Bundler.require(*Rails.groups)
 module ProfessionalWorld
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.time_zone = 'Beijing'
+
     config.load_defaults 5.1
+
+    config.i18n.default_locale = "zh-CN"
+
+    config.active_job.queue_adapter = :sidekiq
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

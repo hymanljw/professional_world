@@ -1,0 +1,80 @@
+<div class="container">
+
+  <div class="control-title">
+    <div class="pc_logo float_left">
+      <%= link_to root_path do %>
+          <%= image_tag @img_path, width:'50', height:'50',alt: '无头像'%>
+          <font color="#000000"><%= raw "#{@current_user.nick} 的文章列表" %></font>
+      <% end %>
+    </div>
+    <%= link_to destroy_user_session_path,method: :delete do %>
+        <div class="sign_out float_right">退出</div>
+    <% end %>
+    <div class="pc_user_logo float_right">
+      <%= link_to edit_personal_path(@current_user) do %>
+          <%= image_tag @img_path,class:"mine-title-pic" %>
+          <span><%= @current_user.nick %></span>
+      <% end %>
+    </div>
+    <%= link_to new_article_path do %>
+        <div class="sign_out float_right">发布文章</div>
+    <% end %>
+  </div>
+
+  <div class="eight-box">
+
+    <div class="single-skill-top" style="margin-top:80px;">
+      <!-- 个人介绍-->
+      <%= image_tag @current_user.head_img_url,width:"70",height: "70",alt: "无头像" %>
+      <h4 class="title-h4"><%= raw @current_user.nick %></h4>
+      <div class="title-h5">微信号：null</div>
+      <div class="title-h5">'闲得蛋疼'</div>
+      <div class="single-skill-top-nav title-h5">
+        <div class="single-skill-top-navicon">
+          籍贯：湖南人
+        </div>
+        <div class="single-skill-top-navicon">文章：<%= raw @current_user.articles.count %>篇</div>
+      </div>
+    </div>
+
+    <div class="renew"></div>
+    <div>
+      <% @articles.each do |article| %>
+          <div class="single-skill-bottom no-pading-b icon-fenge">
+            <%= link_to article_path(article) do %>
+                <div class="user-pic"><%= image_tag @img_path, width:"55", height: "55" %></div>
+                <div class="skill-icon-title">
+                  <div class="skill-icon-title-content">
+                    <div class="user-name"><%= @current_user.nick %>
+                      <span class="skill-iocn-time"><%= '2018-03-02' %></span>
+                    </div>
+                    <div style="font-size:1.4rem;"><%= raw article.title %></div>
+                    <div class="ques-info"><%= raw strip_tags(article.desp).truncate(80) %></div>
+                    <!-- 文章图片 -->
+                    <div class="thumbs">
+                      <% 3.times do %>
+                          <div class=c_thumb>
+                            <img class="picture_thumb" src="<%= @img_path %>" alt="<%= @img_path %>">
+                          </div>
+                      <% end %>
+                    </div>
+                    <ul class="toke">
+                      <% 2.times do %>
+                          <li><span class="blueword"><%= @current_user.nick %>:</span>随随便便评论一下</li>
+                      <% end %>
+                    </ul>
+                    <div class="ques-info-nav">
+                      <div class="ques-info-nav-icon"><%= image_tag "toke-icon_money.png" %>20</div>
+                      <div class="ques-info-nav-icon"><%= image_tag "toke-icon_like.png" %>11</div>
+                      <div class="ques-info-nav-icon"><%= image_tag "toke-icon_write.png" %>2</div>
+                      <div class="ques-info-nav-icon"><%= image_tag "toke-icon_send.png" %>5</div>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+  <%= paginate @articles %>
+</div>
