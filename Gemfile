@@ -49,6 +49,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'annotate'
+  # gem 'sunspot_solr'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -64,3 +65,12 @@ gem 'sidekiq'
 gem "rolify"
 
 gem 'pretender'
+
+gem "audited", "~> 4.7"
+gem 'copy_carrierwave_file'
+gem 'countries', require: 'countries/global'
+
+gem 'sunspot_rails'
+
+gem 'bootstrap-kaminari-views'
+gem 'bootstrap-sass'

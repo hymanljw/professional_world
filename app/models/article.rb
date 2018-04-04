@@ -17,4 +17,9 @@ class Article < ApplicationRecord
 
   belongs_to :user
 
+  searchable do
+    text :title, :default_boost => 2
+    text :desp
+  end
+
 end
