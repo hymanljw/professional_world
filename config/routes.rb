@@ -13,4 +13,7 @@ Rails.application.routes.draw do
     post :stop_impersonating, on: :collection
   end
 
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+
 end

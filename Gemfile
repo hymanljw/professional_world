@@ -49,7 +49,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'annotate'
-  # gem 'sunspot_solr'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -57,7 +56,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'kaminari'
 gem 'simple_form'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave' #, '~> 1.0'
+gem 'carrierwave_backgrounder', git: 'https://github.com/lardawge/carrierwave_backgrounder'
+
 gem 'devise_token_auth'
 gem 'sidekiq'
 

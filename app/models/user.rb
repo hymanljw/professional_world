@@ -29,6 +29,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   mount_uploader :head_img, UserHeadUploader
+  store_in_background :head_img
 
   has_many :articles
 
