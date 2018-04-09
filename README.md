@@ -6,7 +6,8 @@
 `ruby -v ` <br/>   
 #=> ruby 2.3.4p301 (2017-03-30 revision 58214) [x86_64-linux] <br/>   
 `rvm gemset list` <br/>   
-#=>professional_world_pro
+#=> professional_world_pro
 ## 2.然后安装gem
-`gem install bundler <br/>   bundle install`
+`gem install bundler <br/>   
+bundle install`
 
