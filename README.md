@@ -4,8 +4,8 @@
 ## 1.是否安装了rvm ruby 环境
 `rvm list` <br/>   
 `ruby -v ` <br/>   
-#=> 2.3.4
-`rvm gemset list` 
+#=> ruby 2.3.4p301 (2017-03-30 revision 58214) [x86_64-linux] <br/>   
+`rvm gemset list` <br/>   
 #=> gemsets for ruby-2.3.4 (found in /home/hyman/.rvm/gems/ruby-2.3.4)
        (default)
        global
