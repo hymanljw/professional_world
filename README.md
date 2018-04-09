@@ -13,7 +13,7 @@
 ## 3.迁移数据库,并生成种子数据
 `rake db:create` <br/>   
 `rake db:migrate` <br/>   
-`rake dn:seed`
+`rake db:seed`
 ## 4.运行开发环境
 `rails s`
 ## 5.浏览器访问
