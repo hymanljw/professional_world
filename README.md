@@ -6,11 +6,7 @@
 `ruby -v ` <br/>   
 #=> ruby 2.3.4p301 (2017-03-30 revision 58214) [x86_64-linux] <br/>   
 `rvm gemset list` <br/>   
-#=> gemsets for ruby-2.3.4 (found in /home/hyman/.rvm/gems/ruby-2.3.4)
-       (default)
-       global
-    => professional_world_pro
-       skill_world_pro
-
-## 2.
+#=>professional_world_pro
+## 2.然后安装gem
+`gem install bundler <br/>   bundle install`
 
