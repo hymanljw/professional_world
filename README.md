@@ -8,6 +8,13 @@
 `rvm gemset list` <br/>   
 #=> professional_world_pro
 ## 2.然后安装gem
-`gem install bundler <br/>   
-bundle install`
-
+`gem install bundler` <br/>   
+`bundle install`
+## 3.迁移数据库,并生成种子数据
+`rake db:create` <br/>   
+`rake db:migrate` <br/>   
+`rake dn:seed`
+## 4.运行开发环境
+`rails s`
+## 5.浏览器访问
+`127.0.0.1:3000`
