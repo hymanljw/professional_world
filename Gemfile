@@ -75,3 +75,9 @@ gem 'sunspot_rails'
 
 gem 'bootstrap-kaminari-views'
 gem 'bootstrap-sass'
+
+gem 'charlock_holmes'
+
+gem 'dalli'
+
+gem 'ransack'
