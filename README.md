@@ -1,24 +1,15 @@
-# README
+# professional_world 初始化
+## 克隆项目，然后进入项目目录
+`cd professional_world/`
+## 1.是否安装了rvm ruby 环境
+`rvm list`
+`ruby -v ` #=> 2.3.4
+`rvm gemset list`
+#=> gemsets for ruby-2.3.4 (found in /home/hyman/.rvm/gems/ruby-2.3.4)
+       (default)
+       global
+    => professional_world_pro
+       skill_world_pro
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 2.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
