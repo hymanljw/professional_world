@@ -18,7 +18,7 @@ bundle install
 ```
 rake db:create
 rake db:migrate
-rake db:
+rake db:seed
 ```
 ## 4.运行开发环境
 `rails s`
