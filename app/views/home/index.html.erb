@@ -27,7 +27,13 @@
   </div>
 
   <div class="eight-box">
-
+    <div class="single-skill-top" style="margin-top:80px;">
+      <%= search_form_for @q,url: '/' do |f| %>
+          <%= f.label :title_or_desp_cont %>
+          <%= f.search_field :title_or_desp_cont %>
+          <%= f.submit %>
+    <% end %>
+    </div>
     <div class="single-skill-top" style="margin-top:80px;">
       <!-- 个人介绍-->
       <%= image_tag @current_user.head_img_url,width:"70",height: "70",alt: "无头像" %>

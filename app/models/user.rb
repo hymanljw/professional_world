@@ -21,6 +21,8 @@
 #
 
 class User < ApplicationRecord
+  # extend Enumerize
+
   rolify
   audited
   # Include default devise modules. Others available are:
@@ -30,6 +32,8 @@ class User < ApplicationRecord
 
   mount_uploader :head_img, UserHeadUploader
   process_in_background :head_img
+
+  # enumerize :nick,in: ['刘备','关羽','张飞']
 
   has_many :articles
 

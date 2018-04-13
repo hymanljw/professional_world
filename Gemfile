@@ -81,3 +81,8 @@ gem 'charlock_holmes'
 gem 'dalli'
 
 gem 'ransack'
+
+gem 'enumerize'
+
+gem 'thin'
+gem 'faye-rails'

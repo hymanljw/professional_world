@@ -20,5 +20,13 @@ module ProfessionalWorld
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    config.middleware.use FayeRails::Middleware, mount: '/faye', timeout: 25 do
+      map '/notify/**' => NotifyController
+      map default: NotifyController
+      add_extension(ClientEvent.new)
+    end
+    config.middleware.delete Rack::Lock
+
   end
 end
