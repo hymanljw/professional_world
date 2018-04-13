@@ -33,12 +33,11 @@ class PersonalsController < ApplicationController
   private
 
   def require_admin!
-    render 'forbidden/index', status: :forbidden unless true || true_user.has_role?(:admin)
+    render 'forbidden/index', status: :forbidden if @current_user.has_role?(:admin) || true_user.present?
   end
 
   def personal_params
     params.require(:user).permit!
   end
-
 
 end
