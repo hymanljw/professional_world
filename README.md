@@ -3,7 +3,7 @@
 `cd professional_world/`
 ## 1.是否安装了rvm ruby 环境
 ```
-rvm gemset list
+rvm list
 ruby -v 
 ```
 #=> ruby 2.3.4p301 (2017-03-30 revision 58214) [x86_64-linux] <br/>   
