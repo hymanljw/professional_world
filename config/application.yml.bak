@@ -1,0 +1,19 @@
+development:
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_user: root
+  db_password: 905049777
+  database: professional_world_dev
+test:
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_user: root
+  db_password: 905049777
+  database: professional_world_dev
+production:
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_user: root
+  db_password: 905049777
+  database: professional_world_dev
+  SECRET_KEY_BASE:
