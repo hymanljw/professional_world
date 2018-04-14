@@ -14,13 +14,18 @@ ruby -v
 gem install bundler
 bundle install
 ```
-## 3.迁移数据库,并生成种子数据
+## 3.修改配置文件
+```shell
+cp config/application.yml.bak config/application.yml
+# 将config/application.yml文件中数据库配置信息修改成你的配置
+```
+## 4.迁移数据库,并生成种子数据
 ```
 rake db:create
 rake db:migrate
 rake db:seed
 ```
-## 4.运行开发环境
+## 5.运行开发环境
 `rails s`
-## 5.浏览器访问
+## 6.浏览器访问
 `127.0.0.1:3000`
