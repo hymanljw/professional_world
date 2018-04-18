@@ -1,5 +1,5 @@
 class NotifyController < FayeRails::Controller
-  channel '/notify/**' do
+  channel '/notify/aaa' do
     monitor :subscribe do
       puts "Client #{client_id} subscribed to #{channel}"
     end

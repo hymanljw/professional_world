@@ -1,0 +1,10 @@
+<div class="container container-white">
+  <%= simple_form_for @message, url: messages_path,html: { multipart: true },remote: true do |f| %>
+      <div class="padding-box">
+        <div>发布消息</div>
+        <input type="hidden" name="messages[channel]" value="/notify/aaa">
+        <%= f.input_field "messages[channel]",as: :text,class: "publish-box",placeholder: "推送给用户的消息" %>
+        <%= f.button :submit,"提交",id: "deside-answer" %>
+      </div>
+  <% end %>
+</div>

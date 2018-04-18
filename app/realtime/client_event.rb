@@ -2,7 +2,7 @@ class ClientEvent
   def incoming(message, callback)
     if message['channel'] !~ %r{^/meta/}
       if message['data']
-        if false # message['data']['token'] != Settings.faye_token
+        if message['data']['token'] != '123456' #Settings.faye_token
          # Setting any 'error' against the message causes Faye to not accept it.
           message['error'] = "403::Authentication required"
         else
