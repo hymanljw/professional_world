@@ -22,7 +22,7 @@ module ProfessionalWorld
     # -- all .rb files in that directory are automatically loaded.
 
     config.middleware.use FayeRails::Middleware, mount: '/faye', timeout: 25 do
-      map '/notify/**' => NotifyController
+      map '/notify/aaa' => NotifyController
       map default: NotifyController
       add_extension(ClientEvent.new)
     end

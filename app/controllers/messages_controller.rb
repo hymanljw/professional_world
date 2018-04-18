@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
     Rails.logger.info "-----------------------------------------------"
     Rails.logger.info params[:body]
     Rails.logger.info "-----------------------------------------------"
+    render json: {res: 'OK'}
   end
 
 end

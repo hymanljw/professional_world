@@ -7,7 +7,7 @@ class NotifyController < FayeRails::Controller
       puts "Client #{client_id} unsubscribed from #{channel}"
     end
     monitor :publish do
-      puts "Client #{client_id} published #{data.inspect} to #{channel}"
+      Rails.logger.info "Client #{client_id} published #{data.inspect} to #{channel}"
     end
   end
 end
